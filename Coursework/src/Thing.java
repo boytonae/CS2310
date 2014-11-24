@@ -6,6 +6,6 @@ public class Thing
 	}
 	public Thing()
 	{
-		System.out.println("helloThereThisIsATest");
+		System.out.println("Hello, there. This is a test.");
 	}
 }
