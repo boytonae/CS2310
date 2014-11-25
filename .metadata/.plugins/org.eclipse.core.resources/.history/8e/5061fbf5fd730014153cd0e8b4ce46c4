@@ -2,7 +2,6 @@ public class Thing
 {
 	public static void main(String[] args)
 	{
-		@SuppressWarnings("unused")
 		Thing t = new Thing();
 	}
 	public Thing()
@@ -12,12 +11,10 @@ public class Thing
 	
 	public String toCamelCase(String s){
 		char[] t = s.toCharArray();
-		int i = 0;
-		while (i<t.length){
-			if(t[i]==" "){
-				
-			}
-		}
+		
+		for()
+		s.replaceAll("\\s","");
+		return s;
 	}
 	
 	
