@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class TextReader
 {
+	@SuppressWarnings("unused")
 	private Scanner s;
 	public TextReader(String pathFile)
 	{
