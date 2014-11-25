@@ -1,4 +1,7 @@
-
-public class TextReader {
-
+public class TextReader
+{
+	public TextReader()
+	{
+		
+	}
 }
