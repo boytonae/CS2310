@@ -1,11 +1,22 @@
 package bibleApp;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Scanner;
 public class TextReader
 {
-	@SuppressWarnings("unused")
 	private Scanner s;
-	public TextReader(String pathFile)
+	public TextReader(String file)
 	{
-		s = new Scanner(pathFile);
+		try
+		{
+			s = new Scanner(new BufferedReader(new FileReader(file)));
+	        s.useDelimiter("[^a-zA-Z0-9]+");
+		}
+		catch (FileNotFoundException e)
+        {
+            System.err.println(e.getMessage());
+            System.exit(1);
+        }
 	}
 }
