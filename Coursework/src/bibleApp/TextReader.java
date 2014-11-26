@@ -1,7 +1,5 @@
 package bibleApp;
-
 import java.util.Scanner;
-
 public class TextReader
 {
 	@SuppressWarnings("unused")
@@ -9,6 +7,5 @@ public class TextReader
 	public TextReader(String pathFile)
 	{
 		s = new Scanner(pathFile);
-		
 	}
 }
