@@ -27,4 +27,8 @@ public class TextReader
             System.exit(1);
         }
 	}
+	public String readText()
+	{
+		return null;
+	}
 }

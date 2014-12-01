@@ -3,14 +3,10 @@ package bibleApp;
  * 
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
  */
-public class Book
+public class Segment
 {
-	private String name;
-	private Segment segments[];
-	/**
-	 * Constructor
-	 */
-	public Book()
+	private String verses[];
+	public Segment()
 	{
 		
 	}
@@ -18,7 +14,11 @@ public class Book
 	{
 		return null;
 	}
-	public Segment getSegment(int index)
+	public String getRange(int start, int end)
+	{
+		return null;
+	}
+	public String getVerse(int index)
 	{
 		return null;
 	}
