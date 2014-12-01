@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.util.Scanner;
 /**
  * A class to read text from a specified file.
- * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton
+ * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
  */
 public class TextReader
 {
