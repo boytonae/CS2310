@@ -29,6 +29,11 @@ public class TextReader
 	}
 	public String readText()
 	{
-		return null;
+		String text = "";
+		while (s.hasNext())
+		{
+			text += s.next();
+		}
+		return text;
 	}
 }
