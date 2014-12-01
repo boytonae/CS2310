@@ -1,6 +1,5 @@
 package bibleApp;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.HashSet;
@@ -15,7 +14,7 @@ public class TextReader
     {
        HashSet stopWords = new HashSet<String>();
         try {
-           // initialiseStopWords();      //TODO need to write this method BIATCHES!
+            initialiseStopWords();
             s = new Scanner(new BufferedReader(new FileReader(file)));
             s.useDelimiter("[^a-zA-Z0-9]+");
         } catch (FileNotFoundException e) {
