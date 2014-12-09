@@ -14,7 +14,7 @@ public class Controller
 	{
 		Book books[] = new Book[66];
 		reader = new TextReader("assets/kjbible/Genesis.txt");
-		System.out.print(reader.readText());
+		System.out.print(reader.readTitle());
 	}
 	public String getInput()
 	{
