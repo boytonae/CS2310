@@ -5,14 +5,14 @@ package bibleApp;
  */
 public class Controller
 {
-	private Book books[];
+	//private Book books[];
 	private TextReader reader;
 	/**
 	 * Constructor
 	 */
 	public Controller()
 	{
-		books = new Book[66];
+		//books = new Book[66];
 		reader = new TextReader("assets/kjbible/Genesis.txt");
 		printToConsole(reader.readChapters());
 	}
@@ -40,12 +40,12 @@ public class Controller
 	{
 		return null;
 	}
-	private void convertToIndex(String name)
-	{
-		      
-	}
+	//private void convertToIndex(String name)
+	//{
+	//	      
+	//}
 	public static void main(String[] args)
 	{
-		Controller c = new Controller();
+		new Controller();
 	}
 }
