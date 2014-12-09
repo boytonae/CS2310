@@ -10,6 +10,9 @@ public class Segment
 	{
 		
 	}
+	/**
+	 * @return String of all the verses
+	 */
 	public String toString()
 	{
 		return null;
