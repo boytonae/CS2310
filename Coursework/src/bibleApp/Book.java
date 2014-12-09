@@ -20,7 +20,7 @@ public class Book
 	}
 	public Segment getSegment(int index)
 	{
-		return null;
+		return segments[index];
 	}
 	public int find(String search)
 	{

@@ -12,8 +12,14 @@ public class Controller
 	 */
 	public Controller()
 	{
+<<<<<<< HEAD
 		books = new Book[66];
 		
+=======
+		Book books[] = new Book[66];
+		reader = new TextReader("assets/kjbible/Genesis.txt");
+		System.out.print(reader.readText());
+>>>>>>> origin/master
 	}
 	public String getInput()
 	{
@@ -43,6 +49,6 @@ public class Controller
 	 */
 	public static void main(String[] args)
 	{
-		
+		Controller c = new Controller();
 	}
 }
