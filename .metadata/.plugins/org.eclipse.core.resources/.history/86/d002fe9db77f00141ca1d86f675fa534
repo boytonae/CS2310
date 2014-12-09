@@ -12,7 +12,7 @@ public class Controller
 	 */
 	public Controller()
 	{
-		Book books[] = new Book[66];
+		books = new Book[66];
 	}
 	public String getInput()
 	{
@@ -25,16 +25,13 @@ public class Controller
 	public int find(String search)
 	{
 		//Find a word X number of times.
-		return 0;
+		return 0;							//wot kind ov data structuah shud it return as it needs to return locations as well as times
 	}
 	public Book getBook(int index)
 	{
 		return null;
 	}
-	private void convertToIndex(String name)
-	{
-		      
-	}
+	
 	/**
 
 	 * The main method.
