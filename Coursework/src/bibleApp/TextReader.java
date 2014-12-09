@@ -19,6 +19,7 @@ public class TextReader
 		try
 		{
 			s = new Scanner(new BufferedReader(new FileReader(file)));
+	        s.useDelimiter(" ");
 		}
 		catch (FileNotFoundException e)
         {
@@ -26,25 +27,13 @@ public class TextReader
             System.exit(1);
         }
 	}
-	/**
-	 * @return The book's title
-	 */
-	public String readTitle()
+	public String readText()
 	{
-		s.reset();
-		s.useDelimiter("\nCHAPTER");
-		return s.next();
-	}
-	/**
-	 * @return The book's chapters
-	 */
-	public String readChapters()
-	{
-		s.reset();
-		s.useDelimiter("\nCHAPTER");
-		s.next();
 		String text = "";
-		while (s.hasNext()) text += "CHAPTER" + s.next();
+		while (s.hasNext())
+		{
+			text += s.next() + " ";
+		}
 		return text;
 	}
 }
