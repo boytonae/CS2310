@@ -3,7 +3,7 @@ package bibleApp;
  * 
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
  */
-public class Psalm extends Book
+public class Psalm
 {
 	private String header;
 	/**

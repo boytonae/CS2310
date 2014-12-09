@@ -6,7 +6,7 @@ package bibleApp;
 public class Book
 {
 	private String name;
-	private Segment segments[];
+	private Segment segments[];	//
 	/**
 	 * Constructor
 	 */
