@@ -5,7 +5,7 @@ package bibleApp;
  */
 public class Segment
 {
-	private String verses[];		//change to hashmap
+	private String verses[];
 	public Segment()
 	{
 		

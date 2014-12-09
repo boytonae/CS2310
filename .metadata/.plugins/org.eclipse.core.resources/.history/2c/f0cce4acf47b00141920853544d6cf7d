@@ -26,7 +26,7 @@ public class Controller
 	public int find(String search)
 	{
 		//Find a word X number of times.
-		return 0;							//wot kind ov data structuah shud it return as it needs to return locations as well as times
+		return 0;
 	}
 	public Book getBook(int index)
 	{

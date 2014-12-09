@@ -1,8 +1,0 @@
-package bibleApp;
-public class TextReader
-{
-	public TextReader()
-	{
-		
-	}
-}

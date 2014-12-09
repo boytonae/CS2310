@@ -12,6 +12,7 @@ public class Controller
 	 */
 	public Controller()
 	{
+		Book books[] = new Book[66];
 		
 	}
 	public String getInput()
@@ -20,7 +21,7 @@ public class Controller
 	}
 	public void printToConsole(String print)
 	{
-		
+		System.out.print(print);
 	}
 	public int find(String search)
 	{
@@ -33,9 +34,10 @@ public class Controller
 	}
 	private void convertToIndex(String name)
 	{
-		
+		      
 	}
 	/**
+
 	 * The main method.
 	 * @param args
 	 */
