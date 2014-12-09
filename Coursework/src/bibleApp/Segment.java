@@ -1,6 +1,6 @@
 package bibleApp;
 /**
- * This can either be a chapter or a psalm.
+ * 
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
  */
 public class Segment
