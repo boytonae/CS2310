@@ -14,7 +14,7 @@ public class Controller
 	{
 		Book books[] = new Book[66];
 		reader = new TextReader("assets/kjbible/Genesis.txt");
-		System.out.print(reader.readText());
+		System.out.print(reader.readChapters());
 	}
 	public String getInput()
 	{
@@ -27,7 +27,7 @@ public class Controller
 	public int find(String search)
 	{
 		//Find a word X number of times.
-		return 0;							//wot kind ov data structuah shud it return as it needs to return locations as well as times
+		return 0;
 	}
 	public Book getBook(int index)
 	{
@@ -38,7 +38,6 @@ public class Controller
 		      
 	}
 	/**
-
 	 * The main method.
 	 * @param args
 	 */
