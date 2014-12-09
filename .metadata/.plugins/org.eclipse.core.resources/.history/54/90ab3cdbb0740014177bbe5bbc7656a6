@@ -1,8 +1,0 @@
-public class PsalmBook extends Book
-{
-	private String header;
-	public PsalmBook()
-	{
-		
-	}
-}
