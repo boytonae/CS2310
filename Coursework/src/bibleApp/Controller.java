@@ -12,7 +12,7 @@ public class Controller
 	 */
 	public Controller()
 	{
-		Book books[] = new Book[66];
+		books = new Book[66];
 		reader = new TextReader("assets/kjbible/Genesis.txt");
 		System.out.print(reader.readChapters());
 	}
