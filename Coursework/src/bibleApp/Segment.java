@@ -1,6 +1,6 @@
 package bibleApp;
 /**
- * 
+ * A segment is either a chapter or a psalm
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
  */
 public class Segment
@@ -10,6 +10,9 @@ public class Segment
 	{
 		
 	}
+	/**
+	 * @return a string with all the verses
+	 */
 	public String toString()
 	{
 		return null;
