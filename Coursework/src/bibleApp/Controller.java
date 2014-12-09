@@ -14,19 +14,26 @@ public class Controller
 	{
 		books = new Book[66];
 		reader = new TextReader("assets/kjbible/Genesis.txt");
-		System.out.print(reader.readChapters());
+		printToConsole(reader.readChapters());
+	}
+	/**
+	 * Prints the specified string to the console.
+	 */
+	public void printToConsole(String print)
+	{
+		System.out.print(print);
 	}
 	public String getInput()
 	{
 		return null;
 	}
-	public void printToConsole(String print)
-	{
-		System.out.print(print);
-	}
+	/**
+	 * Finds the specified word in all books.
+	 * @param search
+	 * @return The amount of times the word has occurred.
+	 */
 	public int find(String search)
 	{
-		//Find a word X number of times.
 		return 0;
 	}
 	public Book getBook(int index)
@@ -37,10 +44,6 @@ public class Controller
 	{
 		      
 	}
-	/**
-	 * The main method.
-	 * @param args
-	 */
 	public static void main(String[] args)
 	{
 		Controller c = new Controller();

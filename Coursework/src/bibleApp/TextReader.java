@@ -26,12 +26,18 @@ public class TextReader
             System.exit(1);
         }
 	}
+	/**
+	 * @return The book's title
+	 */
 	public String readTitle()
 	{
 		s.reset();
 		s.useDelimiter("\nCHAPTER");
 		return s.next();
 	}
+	/**
+	 * @return The book's chapters.
+	 */
 	public String readChapters()
 	{
 		s.reset();
