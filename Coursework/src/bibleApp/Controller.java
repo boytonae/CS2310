@@ -12,9 +12,10 @@ public class Controller
 	 */
 	public Controller()
 	{
-		Book books[] = new Book[66];
+		books = new Book[66];
 		reader = new TextReader("assets/kjbible/Genesis.txt");
-		System.out.print(reader.readTitle());
+		books[0] = new Book(reader.readTitle(), reader.readChapters());
+		printToConsole(books[0].getName());
 	}
 	public String getInput()
 	{

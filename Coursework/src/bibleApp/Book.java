@@ -10,13 +10,18 @@ public class Book
 	/**
 	 * Constructor
 	 */
-	public Book()
+	public Book(String name, String segments)
 	{
-		
+		this.name = name;
+		this.segments = new Segment[1];
 	}
 	public String toString()
 	{
 		return null;
+	}
+	public String getName()
+	{
+		return name;
 	}
 	public Segment getSegment(int index)
 	{
