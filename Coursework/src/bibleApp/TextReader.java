@@ -19,7 +19,7 @@ public class TextReader
 		try
 		{
 			s = new Scanner(new BufferedReader(new FileReader(file)));
-	        s.useDelimiter("[^a-zA-Z0-9]+");
+	        s.useDelimiter(" ");
 		}
 		catch (FileNotFoundException e)
         {
@@ -32,7 +32,7 @@ public class TextReader
 		String text = "";
 		while (s.hasNext())
 		{
-			text += s.next();
+			text += s.next() + " ";
 		}
 		return text;
 	}
