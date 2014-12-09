@@ -27,12 +27,21 @@ public class TextReader
         }
 	}
 	/**
-	 * @return The book's title
+	 * @return A regular book's title
 	 */
-	public String readTitle()
+	public String readTitleC()
 	{
 		s.reset();
 		s.useDelimiter("\nCHAPTER");
+		return s.next();
+	}
+	/**
+	 * @return The book of Psalms' title
+	 */
+	public String readTitleP()
+	{
+		s.reset();
+		s.useDelimiter("\nPSALM");
 		return s.next();
 	}
 	/**
@@ -45,6 +54,18 @@ public class TextReader
 		s.next();
 		String text = "";
 		while (s.hasNext()) text += "CHAPTER" + s.next();
+		return text;
+	}
+	/**
+	 * @return The book's psalms.
+	 */
+	public String readPsalms()
+	{
+		s.reset();
+		s.useDelimiter("\nPSALM");
+		s.next();
+		String text = "";
+		while (s.hasNext()) text += "PSALM" + s.next();
 		return text;
 	}
 }

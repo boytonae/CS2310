@@ -14,6 +14,7 @@ public class Controller
 	{
 		//books = new Book[66];
 		reader = new TextReader("assets/kjbible/Genesis.txt");
+		printToConsole(reader.readTitleC());
 		printToConsole(reader.readChapters());
 	}
 	/**
