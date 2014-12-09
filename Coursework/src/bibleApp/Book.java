@@ -10,9 +10,9 @@ public class Book
 	/**
 	 * Constructor
 	 */
-	public Book()
+	public Book(String name)
 	{
-		
+		this.name = name;
 	}
 	public String toString()
 	{
