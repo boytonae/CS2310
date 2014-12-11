@@ -15,6 +15,7 @@ public class Controller
 	}
 	/**
 	 * Prints the specified string to the console.
+	 * @param print The text to be printed to the console.
 	 */
 	public void printToConsole(String print)
 	{
@@ -26,7 +27,7 @@ public class Controller
 	}
 	/**
 	 * Finds the specified word in all books.
-	 * @param search
+	 * @param search The word to search for.
 	 * @return The amount of times the word has occurred.
 	 */
 	public int find(String search)
