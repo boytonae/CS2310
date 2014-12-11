@@ -1,20 +1,16 @@
 package bibleApp;
 /**
- * 
+ * The top-level class for this application.
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
  */
 public class Controller
 {
 	private Book books[];
-	private TextReader reader;
-	/**
-	 * Constructor
-	 */
 	public Controller()
 	{
 		books = new Book[66];
-		reader = new TextReader("assets/kjbible/Genesis.txt");
-		printToConsole(reader.readTitleC());
+		BookReader reader = new BookReader("assets/kjbible/Genesis.txt");
+		printToConsole(reader.readTitle());
 		printToConsole(reader.readChapters());
 	}
 	/**
