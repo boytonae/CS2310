@@ -1,15 +1,16 @@
 package bibleApp;
 import java.io.File;
+import java.util.HashMap;
 /**
  * The top-level class for this application.
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
  */
 public class Controller
 {
-	private Book books[];
+	private HashMap<String, Book> books;
 	public Controller()
 	{
-		books = new Book[66];
+		books = new HashMap<String, Book>();
 		readFiles();
 	}
 	public void printToConsole(String print)
@@ -26,7 +27,7 @@ public class Controller
 	}
 	public Book getBook(int index)
 	{
-		return books[index];
+		return null;
 	}
 	private void readFiles()
 	{
@@ -37,13 +38,13 @@ public class Controller
 		{
 			if (files[i].contains("Psalms")) reader = new PsalmReader("assets/kjbible/" + files[i]);
 			else reader = new BookReader("assets/kjbible/" + files[i]);
-			printToConsole(reader.getTitle());
+			books.put(reader.getTitle(), new Book(""));
 			printToConsole(reader.getSegments());
 		}
 	}
 	private void convertToIndex(String name)
 	{
-		      
+		
 	}
 	public static void main(String[] args)
 	{
