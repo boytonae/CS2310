@@ -11,6 +11,7 @@ public class BookReader extends TextReader
 		s.useDelimiter("\nCHAPTER");
 		title = s.next();
 		while (s.hasNext()) segments += "CHAPTER" + s.next();
+		segments += "\n\n";
 	}
 	/**
 	 * @return The book's title

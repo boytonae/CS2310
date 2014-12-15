@@ -11,6 +11,7 @@ public class PsalmReader extends TextReader
 		s.useDelimiter("\nPSALM");
 		title = s.next();
 		while (s.hasNext()) segments += "PSALM" + s.next();
+		segments += "\n\n";
 	}
 	/**
 	 * @return The book's title

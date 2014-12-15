@@ -1,4 +1,7 @@
 package bibleApp;
+
+import java.io.File;
+
 /**
  * The top-level class for this application.
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
@@ -9,14 +12,11 @@ public class Controller
 	public Controller()
 	{
 		books = new Book[66];
-		BookReader reader = new BookReader("assets/kjbible/Genesis.txt");
-		printToConsole(reader.getTitle());
-		printToConsole(reader.getSegments());
+		readFiles();
+		//TextReader reader = new BookReader("assets/kjbible/Genesis.txt");
+		//printToConsole(reader.getTitle());
+		//printToConsole(reader.getSegments());
 	}
-	/**
-	 * Prints the specified string to the console.
-	 * @param print The text to be printed to the console.
-	 */
 	public void printToConsole(String print)
 	{
 		System.out.print(print);
@@ -25,18 +25,26 @@ public class Controller
 	{
 		return null;
 	}
-	/**
-	 * Finds the specified word in all books.
-	 * @param search The word to search for.
-	 * @return The amount of times the word has occurred.
-	 */
 	public int find(String search)
 	{
 		return 0;
 	}
 	public Book getBook(int index)
 	{
-		return null;
+		return books[index];
+	}
+	private void readFiles()
+	{
+		File f = new File("assets/kjbible");
+		TextReader reader;
+		String[] files = f.list();
+		for (int i = 0; i < files.length; i++)
+		{
+			if (files[i].contains("Psalms")) reader = new PsalmReader("assets/kjbible/" + files[i]);
+			else reader = new BookReader("assets/kjbible/" + files[i]);
+			printToConsole(reader.getTitle());
+			printToConsole(reader.getSegments());
+		}
 	}
 	private void convertToIndex(String name)
 	{
