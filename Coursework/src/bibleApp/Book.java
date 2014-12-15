@@ -1,4 +1,8 @@
 package bibleApp;
+
+import java.util.HashMap;
+import exceptions.ChapterOutOfRangeException;
+
 /**
  * 
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
@@ -6,21 +10,25 @@ package bibleApp;
 public class Book
 {
 	private String name;
-	private Segment segments[];	//
-	/**
-	 * Constructor
-	 */
+	private HashMap<String, Segment> segments;
+	 
 	public Book(String name)
 	{
 		this.name = name;
+		segments = new HashMap<String, Segment>();
 	}
 	public String toString()
 	{
 		return null;
 	}
-	public Segment getSegment(int index)
+	public Segment getSegment(String index) throws ChapterOutOfRangeException
 	{
-		return segments[index];
+		if(segments.get(index) != null)
+		{
+		return segments.get(index);
+		}
+		else
+			throw new ChapterOutOfRangeException(index);
 	}
 	public int find(String search)
 	{
