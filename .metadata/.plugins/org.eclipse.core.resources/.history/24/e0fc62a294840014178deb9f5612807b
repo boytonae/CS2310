@@ -19,15 +19,17 @@ public class Segment
 	 */
 	public String toString()
 	{
-		int i = 1;
-		StringBuilder result = new StringBuilder();
-		while (verses.get(i+"") != null)
-		{
-			result.append(verses.get(i+""));
-			i++;
-		}
 		
-		return result.toString();
+		return verses.toString();
+		
+		/**
+		 * or would using a loop and sting builder be faster...
+		 * StringBuilder result = new StringBuilder();
+		 *	for (int i = 0; i < verses.length; i++)
+		 *	{
+		 *		result.append(verses[i]);
+		 *	} 
+		 */
 	}
 	public String getRange(int start, int end)
 	{
