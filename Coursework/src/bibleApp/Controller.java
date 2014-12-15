@@ -36,11 +36,18 @@ public class Controller
 		String[] files = f.list();
 		for (int i = 0; i < files.length; i++)
 		{
+			StringSplitter splitter = new StringSplitter();
 			String name = files[i].replace(".txt", "");
-			if (files[i].contains("Psalms")) reader = new PsalmReader("assets/kjbible/" + files[i]);
-			else reader = new BookReader("assets/kjbible/" + files[i]);
-			books.put(name, new Book(reader.getTitle()));
-			printToConsole(reader.getSegments());
+			if (files[i].contains("Psalms"))
+			{
+				reader = new PsalmReader("assets/kjbible/" + files[i]);
+				books.put(name, splitter.populatePsalmBook(reader.getTitle(), reader.getSegments()));
+			}
+			else
+			{
+				reader = new BookReader("assets/kjbible/" + files[i]);
+				books.put(name, splitter.populateChapterBook(reader.getTitle(), reader.getSegments()));
+			}
 		}
 	}
 	/*
