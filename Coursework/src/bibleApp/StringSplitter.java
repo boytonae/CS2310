@@ -1,12 +1,12 @@
 package bibleApp;
-
 import java.util.HashMap;
 import java.util.regex.Pattern;
-
 public class StringSplitter
 {
-	public StringSplitter(){}
-	
+	public StringSplitter()
+	{
+		
+	}
 	/**
 	 * A method to convert a single string containing all the text in a book
 	 * into segments and verses
@@ -18,16 +18,13 @@ public class StringSplitter
 	public Book populateChapterBook(String title, String allSegments)
 	{
 		HashMap<String, Segment> segments = new HashMap<String, Segment>();
-		
 		String[] tempSegments = allSegments.split(Pattern.quote("CHAPTER"));
-		
 		for (int i = 0; i < tempSegments.length; i++)
 		{
 			Segment tempSegment = populateSegment(tempSegments[i]);
-			//i + 1 because chapters start from 1, not 0
-			segments.put("" + (i + 1), tempSegment);
+			//It should start from 0. Chapters are found by matching strings, not integers.
+			segments.put("" + i, tempSegment);
 		}
-		
 		return new Book(title, segments);
 	}
 	/**
@@ -40,18 +37,14 @@ public class StringSplitter
 	private Segment populateSegment(String allVerses)
 	{
 		HashMap<String, String> verses = new HashMap<String, String>();
-		
 		String[] tempVerses = allVerses.split(Pattern.quote("\n"));
-		
 		//start from 1 to ignore the chapter title 
 		for (int i = 1; i < tempVerses.length; i++)
 		{
 			verses.put( "" + i, tempVerses[i]);
 		}
-		
 		return new Segment(verses);
 	}
-	
 	/**
 	 * A method to convert a single string containing all the text in the 
 	 * book of psalms into psalms and verses 
@@ -62,21 +55,16 @@ public class StringSplitter
 	 */
 	public Book populatePsalmBook(String title, String allPsalms)
 	{
-		HashMap<String, Segment> psalms = new HashMap<String, Segment>();
-		
+		HashMap<String, Segment> psalms = new HashMap<String, Segment>();	
 		String[] tempPsalms = allPsalms.split(Pattern.quote("PSALM"));
-		
 		for (int i = 0; i < tempPsalms.length; i++)
 		{
-			
-				Psalm tempPsalm = populatePsalm(tempPsalms[i]);
-				//i + 1 because chapters start from 1, not 0
-				psalms.put("" + (i + 1), tempPsalm);
-		}
-		
+			Psalm tempPsalm = populatePsalm(tempPsalms[i]);
+			//i + 1 because chapters start from 1, not 0
+			psalms.put("" + (i + 0), tempPsalm);
+		}	
 		return new Book(title, psalms);
 	}
-	
 	/**
 	 * A method to convert a single string containing all the text in a psalms
 	 * into verses, and decide if this psalm has a header
@@ -87,10 +75,8 @@ public class StringSplitter
 	private Psalm populatePsalm(String allPsalms)
 	{
 		HashMap<String, String> verses = new HashMap<String, String>();
-		
 		String[] tempVerses = allPsalms.split(Pattern.quote("\n"));
 		String header = null;
-		
 		//start from 1 to ignore the chapter title
 		for (int i = 1; i < tempVerses.length; i++)
 		{
@@ -102,7 +88,6 @@ public class StringSplitter
 			}
 			else
 			{
-				
 				if (header == null)
 				{
 					//if there is no header, the chapter numbering is the same
@@ -117,7 +102,6 @@ public class StringSplitter
 				}
 			}			
 		}
-		
 		return new Psalm(header, verses);
 	}
 }

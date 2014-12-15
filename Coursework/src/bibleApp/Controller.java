@@ -1,6 +1,8 @@
 package bibleApp;
 import java.io.File;
 import java.util.HashMap;
+import java.util.Scanner;
+import exceptions.ChapterOutOfRangeException;
 /**
  * The top-level class for this application.
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
@@ -8,9 +10,11 @@ import java.util.HashMap;
 public class Controller
 {
 	private HashMap<String, Book> books;
+	private Scanner input;
 	public Controller()
 	{
 		books = new HashMap<String, Book>();
+		input = new Scanner(System.in);
 		readFiles();
 	}
 	public void printToConsole(String print)
@@ -19,7 +23,7 @@ public class Controller
 	}
 	public String getInput()
 	{
-		return null;
+		return input.nextLine();
 	}
 	public int find(String search)
 	{
@@ -58,6 +62,17 @@ public class Controller
 	*/
 	public static void main(String[] args)
 	{
-		new Controller();
+		Controller c = new Controller();
+		String input = "";
+		while (input != "quit")
+		{
+			System.out.println("Enter a thing");
+			input = c.getInput();
+			try
+			{
+				c.printToConsole(c.getBook("Genesis").getSegment("1").getVerse(Integer.parseInt(input)));
+			}
+			catch (ChapterOutOfRangeException e) {}
+		}
 	}
 }
