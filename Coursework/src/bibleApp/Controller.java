@@ -36,10 +36,9 @@ public class Controller
 		String[] files = f.list();
 		for (int i = 0; i < files.length; i++)
 		{
+			String name = files[i].replace(".txt", "");
 			if (files[i].contains("Psalms")) reader = new PsalmReader("assets/kjbible/" + files[i]);
 			else reader = new BookReader("assets/kjbible/" + files[i]);
-			String name = files[i];
-			name = name.replace(".txt", "");
 			books.put(name, new Book(reader.getTitle()));
 			printToConsole(reader.getSegments());
 		}
