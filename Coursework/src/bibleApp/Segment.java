@@ -1,5 +1,6 @@
 package bibleApp;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
@@ -8,8 +9,8 @@ import java.util.LinkedList;
  */
 public class Segment
 {
-	private String verses[];
-	public Segment(String verses[])
+	private HashMap<String, String> verses;
+	public Segment(HashMap<String, String> verses)
 	{
 		this.verses = verses;
 	}
@@ -35,20 +36,23 @@ public class Segment
 		StringBuilder result = new StringBuilder();
 		for (int i = start; i <= end; i++)
 		{
-			result.append(verses[i]);
+			result.append(verses.get(i + ""));
 		}
 		return result.toString();
 	}
+	
 	public String getVerse(int index)
 	{
-		return verses[index];
+		return verses.get(index + "");
 	}
-	public LinkedList<String> find(String search)
+	
+	public LinkedList<String> find(String search, LinkedList<String> results)
 	{
-		LinkedList<String> results = new LinkedList<String>();
-		for (int i = 0; i < verses.length; i++)
+		
+		int i = 1;
+		while (verses.get(i+"") != null)
 		{
-			String current = verses[i];
+			String current = verses.get(i+"");
 			if (current.contains(search))
 			{
 				String location = "";
@@ -56,6 +60,7 @@ public class Segment
 				location += ":" + i;
 				results.add(location);
 			}
+			i++;
 		}
 		return results;
 	}
