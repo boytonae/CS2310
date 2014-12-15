@@ -1,4 +1,7 @@
 package bibleApp;
+
+import java.util.LinkedList;
+
 /**
  * A segment is either a chapter or a psalm
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
@@ -6,27 +9,54 @@ package bibleApp;
 public class Segment
 {
 	private String verses[];
-	public Segment()
+	public Segment(String verses[])
 	{
-		
+		this.verses = verses;
 	}
 	/**
 	 * @return a string with all the verses
 	 */
 	public String toString()
 	{
-		return null;
+		
+		return verses.toString();
+		
+		/**
+		 * or would using a loop and sting builder be faster...
+		 * StringBuilder result = new StringBuilder();
+		 *	for (int i = 0; i < verses.length; i++)
+		 *	{
+		 *		result.append(verses[i]);
+		 *	} 
+		 */
 	}
 	public String getRange(int start, int end)
 	{
-		return null;
+		StringBuilder result = new StringBuilder();
+		for (int i = start; i <= end; i++)
+		{
+			result.append(verses[i]);
+		}
+		return result.toString();
 	}
 	public String getVerse(int index)
 	{
-		return null;
+		return verses[index];
 	}
-	public int find(String search)
+	public LinkedList<String> find(String search)
 	{
-		return 0;
+		LinkedList<String> results = new LinkedList<String>();
+		for (int i = 0; i < verses.length; i++)
+		{
+			String current = verses[i];
+			if (current.contains(search))
+			{
+				String location = "";
+				//somehow get book name and chapter
+				location += ":" + i;
+				results.add(location);
+			}
+		}
+		return results;
 	}
 }
