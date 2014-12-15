@@ -9,13 +9,13 @@ import exceptions.ChapterOutOfRangeException;
  */
 public class Book
 {
-	private String title;
+	private String name;
 	private HashMap<String, Segment> segments;
 	 
-	public Book(String name, HashMap<String, Segment> segments)
+	public Book(String name)
 	{
-		title = name;
-		this.segments = segments;
+		this.name = name;
+		segments = new HashMap<String, Segment>();
 	}
 	public String toString()
 	{

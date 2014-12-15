@@ -20,7 +20,6 @@ public class StringSplitter
 		for (int i = 0; i < tempSegments.length; i++)
 		{
 			Segment tempSegment = populateSegment(tempSegments[i]);
-			//i + 1 because chapters start from 1, not 0
 			segments.put("" + (i + 1), tempSegment);
 		}
 		
@@ -29,15 +28,9 @@ public class StringSplitter
 	
 	private Segment populateSegment(String allVerses)
 	{
-		HashMap<String, String> verses = new HashMap<String, String>();
+		HashMap<String, String> verses = new HashMap<String, String>;
 		
 		String[] tempVerses = allVerses.split(Pattern.quote("\n"));
-		
-		//start from 1 to ignore the chapter header 
-		for (int i = 1; i < tempVerses.length; i++)
-		{
-			
-		}
 		
 		return new Segment(verses);
 	}

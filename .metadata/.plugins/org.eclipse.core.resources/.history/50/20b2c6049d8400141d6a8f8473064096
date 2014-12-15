@@ -1,0 +1,19 @@
+package bibleApp;
+
+import java.util.HashMap;
+
+public class StringSplitter
+{
+	public StringSplitter()
+	{
+		
+		
+	}
+	
+	public Book populateChapterBook(String title, String allSegments)
+	{
+		HashMap<String, Segment> segments = new HashMap<String, Segment>();
+		
+		return new Book(title, )
+	}
+}

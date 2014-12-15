@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;name&apos; in &apos;bibleApp.Book&apos; to &apos;title&apos;&#x0D;&#x0A;- Original project: &apos;Coursework&apos;&#x0D;&#x0A;- Original element: &apos;bibleApp.Book.name&apos;&#x0D;&#x0A;- Renamed element: &apos;bibleApp.Book.title&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;name&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;bibleApp{Book.java[Book^name" name="title" references="true" setter="false" stamp="1418676822710" textual="false" version="1.0"/>
+</session>

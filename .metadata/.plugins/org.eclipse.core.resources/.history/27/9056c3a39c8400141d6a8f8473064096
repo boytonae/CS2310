@@ -1,0 +1,26 @@
+package bibleApp;
+
+import java.util.HashMap;
+
+public class StringSplitter
+{
+	public StringSplitter()
+	{
+		
+		
+	}
+	public HashMap<String,String> splitBook(String book)
+	{
+		return null;
+	}
+	
+	public HashMap<String,String> splitChapter(String segment)
+	{
+		return null;
+	}
+	
+	public HashMap<String,String> splitPsalm(String psalm)
+	{
+		return null;
+	}
+}

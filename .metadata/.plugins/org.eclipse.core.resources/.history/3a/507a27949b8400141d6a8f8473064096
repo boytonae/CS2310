@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public class Segment
 {
-	protected HashMap<String, String> verses;
+	private HashMap<String, String> verses;
 	public Segment(HashMap<String, String> verses)
 	{
 		this.verses = verses;

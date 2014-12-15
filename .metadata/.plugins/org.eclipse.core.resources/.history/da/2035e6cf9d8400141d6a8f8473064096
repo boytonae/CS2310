@@ -1,0 +1,27 @@
+package bibleApp;
+
+import java.util.HashMap;
+import java.util.regex.Pattern;
+
+public class StringSplitter
+{
+	public StringSplitter()
+	{
+		
+		
+	}
+	
+	public Book populateChapterBook(String title, String allSegments)
+	{
+		HashMap<String, Segment> segments = new HashMap<String, Segment>();
+		
+		String[] tempSegments = allSegments.split(Pattern.quote("CHAPTER"));
+		
+		for (int i = 0; i < tempSegments.length; i++)
+		{
+			segments.put("" + (i + 1), tempSegments[i]);
+		}
+		
+		return new Book(title, segments);
+	}
+}
