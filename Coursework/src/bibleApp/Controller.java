@@ -25,7 +25,7 @@ public class Controller
 	{
 		return 0;
 	}
-	public Book getBook(int index)
+	public Book getBook(String key)
 	{
 		return null;
 	}
@@ -38,14 +38,18 @@ public class Controller
 		{
 			if (files[i].contains("Psalms")) reader = new PsalmReader("assets/kjbible/" + files[i]);
 			else reader = new BookReader("assets/kjbible/" + files[i]);
-			books.put(reader.getTitle(), new Book(""));
+			String name = files[i];
+			name = name.replace(".txt", "");
+			books.put(name, new Book(reader.getTitle()));
 			printToConsole(reader.getSegments());
 		}
 	}
+	/*
 	private void convertToIndex(String name)
 	{
 		
 	}
+	*/
 	public static void main(String[] args)
 	{
 		new Controller();
