@@ -5,8 +5,11 @@ import java.util.regex.Pattern;
 
 public class StringSplitter
 {
-	public StringSplitter(){}
-	
+	public StringSplitter()
+	{
+		
+		
+	}
 	/**
 	 * A method to convert a single string containing all the text in a book
 	 * into segments and verses

@@ -1,3 +1,7 @@
 1418676822710	Rename field 'name'
 1418678006982	Rename local variable 'segments'
 1418678080099	Rename local variable 'tempSegments'
+1418680837850	Rename local variable 'allVerses'
+1418680859618	Rename local variable 'tempVerses'
+1418681236106	Rename local variable 'tempPsalms'
+1418681828658	Rename local variable 'tempSegment'

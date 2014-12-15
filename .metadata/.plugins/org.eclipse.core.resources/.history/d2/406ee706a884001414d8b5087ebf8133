@@ -5,8 +5,11 @@ import java.util.regex.Pattern;
 
 public class StringSplitter
 {
-	public StringSplitter(){}
-	
+	public StringSplitter()
+	{
+		
+		
+	}
 	/**
 	 * A method to convert a single string containing all the text in a book
 	 * into segments and verses
@@ -69,20 +72,20 @@ public class StringSplitter
 		for (int i = 0; i < tempPsalms.length; i++)
 		{
 			
-				Psalm tempPsalm = populatePsalm(tempPsalms[i]);
+				Psalm tempSegment = populatePsalm(tempPsalms[i]);
 				//i + 1 because chapters start from 1, not 0
-				psalms.put("" + (i + 1), tempPsalm);
+				psalms.put("" + (i + 1), tempSegment);
 		}
 		
 		return new Book(title, psalms);
 	}
 	
 	/**
-	 * A method to convert a single string containing all the text in a psalms
-	 * into verses, and decide if this psalm has a header
+	 * A method to convert a single string containing all the text in a book
+	 * into chapters and verses
 	 * 
-	 * @param allPsalms - All the verses in this particular psalm, and the header, if there is one
-	 * @return A Psalm with the correct verses and header. Header is null if there is none
+	 * @param allPsalms
+	 * @return
 	 */
 	private Psalm populatePsalm(String allPsalms)
 	{
