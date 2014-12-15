@@ -27,7 +27,7 @@ public class Controller
 	}
 	public Book getBook(String key)
 	{
-		return null;
+		return books.get(key);
 	}
 	private void readFiles()
 	{
