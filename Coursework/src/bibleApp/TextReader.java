@@ -10,6 +10,8 @@ import java.util.Scanner;
 public abstract class TextReader
 {
 	protected Scanner s;
+	protected String title;
+	protected String segments;
 	public TextReader(String file)
 	{
 		try
@@ -20,9 +22,15 @@ public abstract class TextReader
         {
             System.err.println(e.getMessage());
         }
+		title = "";
+		segments = "";
 	}
 	/**
 	 * @return The book's title
 	 */
-	public abstract String readTitle();
+	public abstract String getTitle();
+	/**
+	 * @return The book's segments
+	 */
+	public abstract String getSegments();
 }

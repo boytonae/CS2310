@@ -10,8 +10,8 @@ public class Controller
 	{
 		books = new Book[66];
 		BookReader reader = new BookReader("assets/kjbible/Genesis.txt");
-		printToConsole(reader.readTitle());
-		printToConsole(reader.readChapters());
+		printToConsole(reader.getTitle());
+		printToConsole(reader.getSegments());
 	}
 	/**
 	 * Prints the specified string to the console.

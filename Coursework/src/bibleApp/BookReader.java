@@ -8,26 +8,22 @@ public class BookReader extends TextReader
 	public BookReader(String file)
 	{
 		super(file);
+		s.useDelimiter("\nCHAPTER");
+		title = s.next();
+		while (s.hasNext()) segments += "CHAPTER" + s.next();
 	}
 	/**
 	 * @return The book's title
 	 */
-	public String readTitle()
+	public String getTitle()
 	{
-		s.reset();
-		s.useDelimiter("\nCHAPTER");
-		return s.next();
+		return title;
 	}
 	/**
 	 * @return The book's chapters.
 	 */
-	public String readChapters()
+	public String getSegments()
 	{
-		s.reset();
-		s.useDelimiter("\nCHAPTER");
-		s.next();
-		String text = "";
-		while (s.hasNext()) text += "CHAPTER" + s.next();
-		return text;
+		return segments;
 	}
 }

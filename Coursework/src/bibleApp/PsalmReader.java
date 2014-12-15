@@ -8,26 +8,22 @@ public class PsalmReader extends TextReader
 	public PsalmReader(String file)
 	{
 		super(file);
+		s.useDelimiter("\nPSALM");
+		title = s.next();
+		while (s.hasNext()) segments += "PSALM" + s.next();
 	}
 	/**
 	 * @return The book's title
 	 */
-	public String readTitle()
+	public String getTitle()
 	{
-		s.reset();
-		s.useDelimiter("\nPSALM");
-		return s.next();
+		return title;
 	}
 	/**
 	 * @return The book's psalms.
 	 */
-	public String readPsalms()
+	public String getSegments()
 	{
-		s.reset();
-		s.useDelimiter("\nPSALM");
-		s.next();
-		String text = "";
-		while (s.hasNext()) text += "PSALM" + s.next();
-		return text;
+		return segments;
 	}
 }
