@@ -1,7 +1,5 @@
 package bibleApp;
-
 import java.io.File;
-
 /**
  * The top-level class for this application.
  * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
@@ -13,9 +11,6 @@ public class Controller
 	{
 		books = new Book[66];
 		readFiles();
-		//TextReader reader = new BookReader("assets/kjbible/Genesis.txt");
-		//printToConsole(reader.getTitle());
-		//printToConsole(reader.getSegments());
 	}
 	public void printToConsole(String print)
 	{
@@ -35,8 +30,8 @@ public class Controller
 	}
 	private void readFiles()
 	{
-		File f = new File("assets/kjbible");
 		TextReader reader;
+		File f = new File("assets/kjbible");
 		String[] files = f.list();
 		for (int i = 0; i < files.length; i++)
 		{
