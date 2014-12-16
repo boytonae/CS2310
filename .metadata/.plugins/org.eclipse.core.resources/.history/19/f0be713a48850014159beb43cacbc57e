@@ -8,9 +8,11 @@ import exceptions.ChapterOutOfRangeException;
  */
 public class Book
 {
+	private String title;
 	private HashMap<String, Segment> segments;
 	public Book(String name, HashMap<String, Segment> segments)
 	{
+		title = name;
 		this.segments = segments;
 	}
 	public String toString()
@@ -34,7 +36,7 @@ public class Book
 	/**
 	 * 
 	 */
-	public Stack<String> find(String search, String title)
+	public Stack<String> find(String search)
 	{
 		Stack<String> results = new Stack<String>();
 		int i = 0;								

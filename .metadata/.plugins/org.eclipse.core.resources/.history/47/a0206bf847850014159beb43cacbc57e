@@ -2,7 +2,6 @@ package bibleApp;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Stack;
 import java.util.regex.Pattern;
 import exceptions.ChapterOutOfRangeException;
 import exceptions.InvalidBookNameException;
@@ -33,17 +32,9 @@ public class Controller
 	/**
 	 * 
 	 */
-	public Stack find(String search)
+	public int find(String search)
 	{
-		Stack<String> result = new Stack<String>();
-		int i = 0;
-		while(bookNames[i]!= null)
-		{
-			//gets the book which is stored in place i inside of bookNames, then invokes the books find method.
-			books.get(bookNames[i]).find(search, bookNames[i]);		
-			i++;
-		}
-		return result;
+		
 	}
 	/**
 	 * Retrieves a specified book from the collection..

@@ -2,7 +2,6 @@ package bibleApp;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Stack;
 import java.util.regex.Pattern;
 import exceptions.ChapterOutOfRangeException;
 import exceptions.InvalidBookNameException;
@@ -15,7 +14,6 @@ public class Controller
 {
 	private HashMap<String, Book> books;
 	private Scanner input;
-	private String[] bookNames;
 	public Controller()
 	{
 		books = new HashMap<String, Book>();
@@ -33,17 +31,9 @@ public class Controller
 	/**
 	 * 
 	 */
-	public Stack find(String search)
+	public int find(String search)
 	{
-		Stack<String> result = new Stack<String>();
-		int i = 0;
-		while(bookNames[i]!= null)
-		{
-			//gets the book which is stored in place i inside of bookNames, then invokes the books find method.
-			books.get(bookNames[i]).find(search, bookNames[i]);		
-			i++;
-		}
-		return result;
+		return 0;
 	}
 	/**
 	 * Retrieves a specified book from the collection..
@@ -64,19 +54,19 @@ public class Controller
 	{
 		TextReader reader;
 		File f = new File("assets/kjbible");
-		bookNames = f.list();
-		for (int i = 0; i < bookNames.length; i++)
+		String[] files = f.list();
+		for (int i = 0; i < files.length; i++)
 		{
 			StringSplitter splitter = new StringSplitter();
-			String name = bookNames[i].replace(".txt", "");
-			if (bookNames[i].contains("Psalms"))
+			String name = files[i].replace(".txt", "");
+			if (files[i].contains("Psalms"))
 			{
-				reader = new PsalmReader("assets/kjbible/" + bookNames[i]);
+				reader = new PsalmReader("assets/kjbible/" + files[i]);
 				books.put(name, splitter.populatePsalmBook(reader.getTitle(), reader.getSegments()));
 			}
 			else
 			{
-				reader = new BookReader("assets/kjbible/" + bookNames[i]);
+				reader = new BookReader("assets/kjbible/" + files[i]);
 				books.put(name, splitter.populateChapterBook(reader.getTitle(), reader.getSegments()));
 			}
 		}
