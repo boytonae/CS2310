@@ -147,8 +147,9 @@ public class Controller
 		Book book = getBook(bookID);
 		try
 		{
-			Segment result = book.getSegment(segmentID);			
-			System.out.println(result.getRange(Integer.parseInt(firstVerseID), Integer.parseInt(lastVerseID)));
+			Segment result = book.getSegment(segmentID);
+			result.getRange(Integer.parseInt(firstVerseID), Integer.parseInt(lastVerseID));
+			System.out.println(result.toString());
 		}
 		catch (ChapterOutOfRangeException e) {}
 	}

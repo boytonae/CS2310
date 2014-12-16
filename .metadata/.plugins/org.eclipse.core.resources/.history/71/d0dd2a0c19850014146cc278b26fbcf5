@@ -129,27 +129,11 @@ public class Controller
 	
 	private void printSegmentVerse(String bookID, String segmentID, String verseID)
 	{
-		Book book = getBook(bookID);
-		try
-		{
-			Segment result = book.getSegment(segmentID);
-			try
-			{
-				System.out.println(result.getVerse(Integer.parseInt(verseID)));
-			}
-			catch (VerseOutOfRangeException e){}
-		}
-		catch (ChapterOutOfRangeException e) {}
+		
 	}
 	
 	private void printSegmentVerseRange(String bookID, String segmentID, String firstVerseID, String lastVerseID)
 	{
-		Book book = getBook(bookID);
-		try
-		{
-			Segment result = book.getSegment(segmentID);			
-			System.out.println(result.getRange(Integer.parseInt(firstVerseID), Integer.parseInt(lastVerseID)));
-		}
-		catch (ChapterOutOfRangeException e) {}
+		
 	}
 }
