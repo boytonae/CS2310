@@ -206,14 +206,7 @@ public class Controller
 				{
 					System.out.println("Enter a thing");
 					input = c.getInput();
-					try 
-					{
-						c.parseInput(input);
-					}
-					catch(CommandNotRecognisedException e)
-					{
-						System.err.println(e.getMessage());
-					}
+					c.parseInput(input);
 				}
 			
 	}

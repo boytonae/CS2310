@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import exceptions.ChapterOutOfRangeException;
-import exceptions.CommandNotRecognisedException;
 import exceptions.InvalidBookNameException;
 import exceptions.UnknownErrorException;
 import exceptions.VerseOutOfRangeException;
@@ -88,7 +87,7 @@ public class Controller
 	 * Processes a line of user input.
 	 * @param input The data entered by the user
 	 */
-	private void parseInput(String input) throws CommandNotRecognisedException
+	private void parseInput(String input)
 	{
 		if (input.equals("quit"))
 		{
@@ -128,10 +127,6 @@ public class Controller
 			{
 				//just a segment
 				String[] inputs = input.split(Pattern.quote(" "));
-				if (inputs.length != 2)
-				{
-					throw new CommandNotRecognisedException();
-				}
 				printSegment(inputs[0], inputs[1]);
 			}
 		}
@@ -206,15 +201,11 @@ public class Controller
 				{
 					System.out.println("Enter a thing");
 					input = c.getInput();
-					try 
-					{
-						c.parseInput(input);
-					}
-					catch(CommandNotRecognisedException e)
-					{
-						System.err.println(e.getMessage());
-					}
+					c.parseInput(input);
 				}
 			
+			
+		
+		
 	}
 }
