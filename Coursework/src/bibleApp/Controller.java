@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 import exceptions.ChapterOutOfRangeException;
 import exceptions.CommandNotRecognisedException;
 import exceptions.InvalidBookNameException;
-import exceptions.UnknownErrorException;
 import exceptions.VerseOutOfRangeException;
 /**
  * The top-level class for this application.
@@ -32,7 +31,7 @@ public class Controller
 		return input.nextLine();
 	}
 	/**
-	 * 
+	 * Finds a specified word.
 	 */
 	public int find(String search)
 	{
