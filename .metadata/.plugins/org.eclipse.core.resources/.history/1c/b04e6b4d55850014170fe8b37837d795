@@ -5,7 +5,6 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 import exceptions.ChapterOutOfRangeException;
 import exceptions.InvalidBookNameException;
-import exceptions.UnknownErrorException;
 import exceptions.VerseOutOfRangeException;
 /**
  * The top-level class for this application.
@@ -43,7 +42,7 @@ public class Controller
 			result = books.get(bookNames[i]).find(search, bookNames[i], result);		
 			i++;
 		}
-		System.out.println(search + " appeared in the places above " + result + " times");
+		System.out.print(search + "appeared in the places above " + result + " times");
 		return result;
 	}
 	/**
@@ -193,21 +192,13 @@ public class Controller
 	 */
 	public static void main(String[] args)
 	{
-		
-			Controller c = new Controller();
-			String input = "";
-			try {
-				while (!input.equals("quit"))
-				{
-					System.out.println("Enter a thing");
-					input = c.getInput();
-					c.parseInput(input);
-				}
-			} catch (UnknownErrorException e) {
-
-			}
-			
-		
-		
+		Controller c = new Controller();
+		String input = "";
+		while (!input.equals("quit"))
+		{
+			System.out.println("Enter a thing");
+			input = c.getInput();
+			c.parseInput(input);
+		}
 	}
 }

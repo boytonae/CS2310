@@ -9,4 +9,5 @@
 <fullyQualifiedTypeName name="exceptions.VerseOutOfRangeException"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="exceptions.UnknownErrorException"/>
 </qualifiedTypeNameHistroy>
