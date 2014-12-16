@@ -43,6 +43,3 @@ public class Book
 		return results;			
 	}
 }
-
-
-
