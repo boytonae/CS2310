@@ -38,9 +38,9 @@ public class Book
 	{
 		
 		int i = 0;								
-		while (segments.containsKey(i+""))
+		while (segments.containsKey(i))
 		{
-			results = segments.get(i+"").find(search, results, title, i);
+			results = segments.get(i).find(search, results, title, i);
 			i++;
 		}
 		return results;			
