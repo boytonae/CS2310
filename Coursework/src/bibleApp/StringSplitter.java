@@ -81,7 +81,7 @@ public class StringSplitter
 		for (int i = 1; i < tempVerses.length; i++)
 		{
 			//Check to see if the psalm has a header
-			if (i == 0 && !tempVerses[i].contains("1"))
+			if (i == 1 && !tempVerses[i].contains("1"))
 			{
 				//if there is, set it to not null
 				header = tempVerses[i];
@@ -98,7 +98,7 @@ public class StringSplitter
 				{
 					//if there is a header, then the chapter numbering is one less
 					//than the index numbering
-					verses.put( "" + (i-1), tempVerses[i]);
+					verses.put( "" + (i - 1), tempVerses[i]);
 				}
 			}			
 		}
