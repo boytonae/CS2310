@@ -20,11 +20,17 @@ public class Controller
 		input = new Scanner(System.in);
 		readFiles();
 	}
-
+	/**
+	 * Retrieves a single line of user input
+	 * @return The data entered by the user
+	 */
 	public String getInput()
 	{
 		return input.nextLine();
 	}
+	/**
+	 * 
+	 */
 	public int find(String search)
 	{
 		return 0;
