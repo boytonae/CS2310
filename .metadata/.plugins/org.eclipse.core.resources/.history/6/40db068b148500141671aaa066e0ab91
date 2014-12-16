@@ -1,7 +1,7 @@
 package bibleApp;
 
 import java.util.HashMap;
-import java.util.Stack;
+import java.util.LinkedList;
 import exceptions.ChapterOutOfRangeException;
 
 /**
@@ -30,16 +30,15 @@ public class Book
 		}
 		throw new ChapterOutOfRangeException(index);
 	}
-	
-	public Stack<String> find(String search)
+	public int find(String search)
 	{
-		Stack<String> results = new Stack<String>();
-		int i = 0;								
+		LinkedList<String> results = new LinkedList<String>();
+		int i = 0;
+		int total = 0;									
 		while (segments.containsKey(i)){
-			results = segments.get(i).find(search, results);
-			i++;
+			segments.get(i).find(search, results);
 		}
-		
-		return results;			
+		return total;
+				
 	}
 }

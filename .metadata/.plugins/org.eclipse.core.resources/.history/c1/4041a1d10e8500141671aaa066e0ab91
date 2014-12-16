@@ -2,7 +2,6 @@ package bibleApp;
 
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Stack;
 
 /**
  * A segment is either a chapter or a psalm
@@ -27,6 +26,7 @@ public class Segment
 			result.append(verses.get(i+""));
 			i++;
 		}
+		
 		return result.toString();
 	}
 	public String getRange(int start, int end)
@@ -44,8 +44,9 @@ public class Segment
 		return verses.get(index + "");
 	}
 	
-	public Stack<String> find(String search, Stack<String> results)
+	public LinkedList<String> find(String search, LinkedList<String> results)
 	{
+		
 		int i = 1;
 		while (verses.get(i+"") != null)
 		{
