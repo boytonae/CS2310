@@ -1,10 +1,10 @@
 package bibleApp;
-
 import java.io.File;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import exceptions.ChapterOutOfRangeException;
+import exceptions.InvalidBookNameException;
 import exceptions.VerseOutOfRangeException;
 /**
  * The top-level class for this application.
@@ -29,10 +29,21 @@ public class Controller
 	{
 		return 0;
 	}
-	public Book getBook(String key)
+	/**
+	 * Retrieves a specified book from the collection..
+	 * @param key The name of the book
+	 * @return The corresponding Book object
+	 * @throws InvalidBookNameException
+	 */
+	public Book getBook(String key) throws InvalidBookNameException
 	{
-		return books.get(key);
+		Book book = books.get(key);
+		if (book != null) return books.get(key);
+		else throw new InvalidBookNameException();
 	}
+	/**
+	 * Reads the text files and adds them to the book collection.
+	 */
 	private void readFiles()
 	{
 		TextReader reader;
@@ -54,24 +65,10 @@ public class Controller
 			}
 		}
 	}
-	/*
-	private void convertToIndex(String name)
-	{
-		
-	}
-	*/
-	public static void main(String[] args)
-	{
-		Controller c = new Controller();
-		String input = "";
-		while (!input.equals("quit"))
-		{
-			System.out.println("Enter a thing");
-			input = c.getInput();
-			c.parseInput(input);
-		}
-	}
-	
+	/**
+	 * Processes a line of user input.
+	 * @param input The data entered by the user
+	 */
 	private void parseInput(String input)
 	{
 		if (input.equals("quit"))
@@ -85,7 +82,6 @@ public class Controller
 				if (input.contains("-"))
 				{
 					//range of verses
-					
 					//split the input around the colon
 					String[] initialSplit = input.split(Pattern.quote(":"));
 					//split the first half into book and chapter
@@ -97,7 +93,6 @@ public class Controller
 				else
 				{
 					//just one verse
-					
 					//split the input around the colon
 					String[] initialSplit = input.split(Pattern.quote(":"));
 					//split the first half into book and chapter
@@ -113,43 +108,75 @@ public class Controller
 			}
 		}
 	}
-	
+	/**
+	 * Prints a segment to the console.
+	 * @param bookID The book containing the segment
+	 * @param segmentID The index of the segment
+	 */
 	private void printSegment(String bookID, String segmentID)
 	{
-		Book book = getBook(bookID);
 		try
 		{
+			Book book = getBook(bookID);
 			Segment result = book.getSegment(segmentID);
 			System.out.println(result.toString());
 		}
-		catch (ChapterOutOfRangeException e) {}
-	
-		
+		catch (InvalidBookNameException | ChapterOutOfRangeException e)
+		{
+			System.err.println(e.getMessage());
+		}
 	}
-	
+	/**
+	 * Prints a verse to the console.
+	 * @param bookID The book containing the segment
+	 * @param segmentID The segment containing the verse
+	 * @param verseID The index of the verse
+	 */
 	private void printSegmentVerse(String bookID, String segmentID, String verseID)
 	{
-		Book book = getBook(bookID);
 		try
 		{
+			Book book = getBook(bookID);
 			Segment result = book.getSegment(segmentID);
-			try
-			{
-				System.out.println(result.getVerse(Integer.parseInt(verseID)));
-			}
-			catch (VerseOutOfRangeException e){}
+			System.out.println(result.getVerse(Integer.parseInt(verseID)));
 		}
-		catch (ChapterOutOfRangeException e) {}
+		catch (InvalidBookNameException | ChapterOutOfRangeException | VerseOutOfRangeException e)
+		{
+			System.err.println(e.getMessage());
+		}
 	}
-	
+	/**
+	 * Prints a range of verses to the console.
+	 * @param bookID The book containing the segment
+	 * @param segmentID The segment containing the verses
+	 * @param firstVerseID The index of the first verse to be printed
+	 * @param lastVerseID The index of the last verse to be printed
+	 */
 	private void printSegmentVerseRange(String bookID, String segmentID, String firstVerseID, String lastVerseID)
 	{
-		Book book = getBook(bookID);
 		try
 		{
+			Book book = getBook(bookID);
 			Segment result = book.getSegment(segmentID);			
 			System.out.println(result.getRange(Integer.parseInt(firstVerseID), Integer.parseInt(lastVerseID)));
 		}
-		catch (ChapterOutOfRangeException e) {}
+		catch (InvalidBookNameException | ChapterOutOfRangeException | VerseOutOfRangeException e)
+		{
+			System.err.println(e.getMessage());
+		}
+	}
+	/**
+	 * The main method for this application.
+	 */
+	public static void main(String[] args)
+	{
+		Controller c = new Controller();
+		String input = "";
+		while (!input.equals("quit"))
+		{
+			System.out.println("Enter a thing");
+			input = c.getInput();
+			c.parseInput(input);
+		}
 	}
 }
