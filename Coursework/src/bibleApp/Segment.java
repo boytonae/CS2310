@@ -52,13 +52,15 @@ public class Segment
 		if (temp == null) throw new VerseOutOfRangeException();
 		return verses.get(index + "");
 	}
-	
+	/**
+	 * Finds a specified search term in this segment.
+	 */
 	public int find(String search, int totalCount, String bookName, int chapter)
 	{
-		int i = 1;		
-		while (verses.get(i+"") != null)
+		int i = 1;
+		while (verses.get(i + "") != null)
 		{
-			String current = verses.get(i+"");
+			String current = verses.get(i + "");
 			if (current.contains(search))
 			{
 				System.out.println(bookName + " " + chapter + ":" + i);

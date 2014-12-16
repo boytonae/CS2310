@@ -36,11 +36,11 @@ public class Controller
 	public int find(String search)
 	{
 		int result = 0;
-		
-		for(int i =0; i<66; i++)
+		for (int i = 0; i < 66; i++)
 		{
-			//gets the book which is stored in place i inside of bookNames, then invokes the books find method.
-			result = books.get(bookNames[i]).find(search, bookNames[i], result);		
+			// gets the book which is stored in place i inside of bookNames,
+			// then invokes the books find method.
+			result = books.get(bookNames[i]).find(search, bookNames[i], result);
 			i++;
 		}
 		System.out.println(search + " appeared in the places above " + result + " times");
@@ -93,7 +93,7 @@ public class Controller
 		{
 			System.exit(1);
 		}
-		else if(input.contains("Search"))
+		else if (input.contains("Search"))
 		{
 			String searchTerm = input.replace("Search ", "");
 			find(searchTerm);
@@ -104,33 +104,30 @@ public class Controller
 			{
 				if (input.contains("-"))
 				{
-					//range of verses
-					//split the input around the colon
+					// range of verses
+					// split the input around the colon
 					String[] initialSplit = input.split(Pattern.quote(":"));
-					//split the first half into book and chapter
+					// split the first half into book and chapter
 					String[] inputs = initialSplit[0].split(Pattern.quote(" "));
-					//Split the second half into the start and end points
+					// Split the second half into the start and end points
 					String[] verseRange = initialSplit[1].split(Pattern.quote("-"));
 					printSegmentVerseRange(inputs[0], inputs[1], verseRange[0], verseRange[1]);
 				}
 				else
 				{
-					//just one verse
-					//split the input around the colon
+					// just one verse
+					// split the input around the colon
 					String[] initialSplit = input.split(Pattern.quote(":"));
-					//split the first half into book and chapter
+					// split the first half into book and chapter
 					String[] inputs = initialSplit[0].split(Pattern.quote(" "));
 					printSegmentVerse(inputs[0], inputs[1], initialSplit[1]);
 				}
 			}
 			else
 			{
-				//just a segment
+				// just a segment
 				String[] inputs = input.split(Pattern.quote(" "));
-				if (inputs.length != 2)
-				{
-					throw new CommandNotRecognisedException();
-				}
+				if (inputs.length != 2) { throw new CommandNotRecognisedException(); }
 				printSegment(inputs[0], inputs[1]);
 			}
 		}
@@ -184,7 +181,7 @@ public class Controller
 		try
 		{
 			Book book = getBook(bookID);
-			Segment result = book.getSegment(segmentID);			
+			Segment result = book.getSegment(segmentID);
 			System.out.println(result.getRange(Integer.parseInt(firstVerseID), Integer.parseInt(lastVerseID)));
 		}
 		catch (InvalidBookNameException | ChapterOutOfRangeException | VerseOutOfRangeException e)
@@ -209,14 +206,14 @@ public class Controller
 		{
 			System.out.println("Enter a chapter, verse or search term.");
 			input = c.getInput();
-			try 
+			try
 			{
 				c.parseInput(input);
 			}
-			catch(CommandNotRecognisedException e)
+			catch (CommandNotRecognisedException e)
 			{
 				System.err.println(e.getMessage());
 			}
-		}		
+		}
 	}
 }

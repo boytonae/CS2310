@@ -19,9 +19,9 @@ public abstract class TextReader
 			s = new Scanner(new BufferedReader(new FileReader(file)));
 		}
 		catch (FileNotFoundException e)
-        {
-            System.err.println(e.getMessage());
-        }
+		{
+			System.err.println(e.getMessage());
+		}
 		title = "";
 		segments = "";
 	}

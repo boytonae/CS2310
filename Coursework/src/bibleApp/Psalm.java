@@ -6,7 +6,7 @@ import java.util.HashMap;
  */
 public class Psalm extends Segment
 {
-	//header is null if there is none
+	// header is null if there is none
 	private String header;
 	public Psalm(String header, HashMap<String, String> verses)
 	{
