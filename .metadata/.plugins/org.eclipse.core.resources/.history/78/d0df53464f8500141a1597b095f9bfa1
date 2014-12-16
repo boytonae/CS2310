@@ -40,11 +40,11 @@ public class Controller
 		
 		while(bookNames[i]!= null)
 		{
-			//gets the book which is stored in place i inside of bookNames, then invokes the books find method.
-			result = books.get(bookNames[i]).find(search, bookNames[i], result);		
-			i++;
+		//gets the book which is stored in place i inside of bookNames, then invokes the books find method.
+		result = books.get(bookNames[i]).find(search, bookNames[i], result);		
+		i++;
 		}
-		return result;
+return result;
 	}
 	/**
 	 * Retrieves a specified book from the collection..

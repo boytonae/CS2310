@@ -34,9 +34,9 @@ public class Book
 	/**
 	 * 
 	 */
-	public int find(String search, String title, int results)
+	public Stack<String> find(String search, String title)
 	{
-		
+		Stack<String> results = new Stack<String>();
 		int i = 0;								
 		while (segments.containsKey(i))
 		{

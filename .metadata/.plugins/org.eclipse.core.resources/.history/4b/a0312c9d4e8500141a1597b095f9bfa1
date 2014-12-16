@@ -33,15 +33,14 @@ public class Controller
 	/**
 	 * 
 	 */
-	public int find(String search)
+	public Stack find(String search)
 	{
-		int result = 0;
+		Stack<String> result = new Stack<String>();
 		int i = 0;
-		
 		while(bookNames[i]!= null)
 		{
 			//gets the book which is stored in place i inside of bookNames, then invokes the books find method.
-			result = books.get(bookNames[i]).find(search, bookNames[i], result);		
+			books.get(bookNames[i]).find(search, bookNames[i]);		
 			i++;
 		}
 		return result;
