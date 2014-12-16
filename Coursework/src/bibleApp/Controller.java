@@ -2,7 +2,6 @@ package bibleApp;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Stack;
 import java.util.regex.Pattern;
 import exceptions.ChapterOutOfRangeException;
 import exceptions.InvalidBookNameException;
@@ -47,7 +46,7 @@ public class Controller
 		return result;
 	}
 	/**
-	 * Retrieves a specified book from the collection..
+	 * Retrieves a specified book from the collection.
 	 * @param key The name of the book
 	 * @return The corresponding Book object
 	 * @throws InvalidBookNameException
