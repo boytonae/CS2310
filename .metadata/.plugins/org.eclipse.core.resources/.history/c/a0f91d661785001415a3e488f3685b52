@@ -1,4 +1,3 @@
-package bibleApp;
 
 import java.io.File;
 import java.util.HashMap;
@@ -31,7 +30,7 @@ public class Controller
 	}
 	public Book getBook(String key)
 	{
-		return books.get(key);
+		return books.get(key);package bibleApp;
 	}
 	private void readFiles()
 	{

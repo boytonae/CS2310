@@ -1,4 +1,3 @@
-package bibleApp;
 
 import java.io.File;
 import java.util.HashMap;
@@ -12,26 +11,7 @@ import exceptions.VerseOutOfRangeException;
  */
 public class Controller
 {
-	private HashMap<String, Book> books;
-	private Scanner input;
-	public Controller()
-	{
-		books = new HashMap<String, Book>();
-		input = new Scanner(System.in);
-		readFiles();
-	}
-
-	public String getInput()
-	{
-		return input.nextLine();
-	}
-	public int find(String search)
-	{
-		return 0;
-	}
-	public Book getBook(String key)
-	{
-		return books.get(key);
+	
 	}
 	private void readFiles()
 	{

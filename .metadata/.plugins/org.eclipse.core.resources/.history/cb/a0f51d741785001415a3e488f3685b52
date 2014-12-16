@@ -1,4 +1,3 @@
-package bibleApp;
 
 import java.io.File;
 import java.util.HashMap;
@@ -71,7 +70,6 @@ public class Controller
 			c.parseInput(input);
 		}
 	}
-	
 	private void parseInput(String input)
 	{
 		if (input.equals("quit"))

@@ -1,18 +1,4 @@
-package bibleApp;
-
-import java.io.File;
-import java.util.HashMap;
-import java.util.Scanner;
-import java.util.regex.Pattern;
-import exceptions.ChapterOutOfRangeException;
-import exceptions.VerseOutOfRangeException;
-/**
- * The top-level class for this application.
- * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
- */
-public class Controller
-{
-	private HashMap<String, Book> books;
+private HashMap<String, Book> books;
 	private Scanner input;
 	public Controller()
 	{
@@ -31,7 +17,20 @@ public class Controller
 	}
 	public Book getBook(String key)
 	{
-		return books.get(key);
+		return books.get(key);package bibleApp;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import exceptions.ChapterOutOfRangeException;
+import exceptions.VerseOutOfRangeException;
+/**
+ * The top-level class for this application.
+ * @author Norfolk-in-Chance (Thomas Slate, Jack Taylor, Abigail Boyton)
+ */
+public class Controller
+{
+	
 	}
 	private void readFiles()
 	{
