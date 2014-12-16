@@ -3,7 +3,6 @@ package bibleApp;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Stack;
-import exceptions.VerseOutOfRangeException;
 
 /**
  * A segment is either a chapter or a psalm
@@ -40,13 +39,8 @@ public class Segment
 		return result.toString();
 	}
 	
-	public String getVerse(int index) throws VerseOutOfRangeException
+	public String getVerse(int index)
 	{
-		String temp = verses.get(index + "");
-		if (temp == null)
-		{
-			throw new VerseOutOfRangeException();
-		}
 		return verses.get(index + "");
 	}
 	
