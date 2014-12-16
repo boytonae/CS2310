@@ -22,13 +22,6 @@ public class Psalm extends Segment
 	
 	public String toString()
 	{
-		if (header != null)
-		{
-			return header + super.toString();
-		}
-		else
-		{
-			return super.toString();
-		}
+		return null;
 	}
 }
