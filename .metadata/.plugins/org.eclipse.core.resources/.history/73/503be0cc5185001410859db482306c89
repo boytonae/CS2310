@@ -36,6 +36,7 @@ public class Controller
 	{
 		int result = 0;
 		int i = 0;
+	
 		while(bookNames[i]!= null)
 		{
 			//gets the book which is stored in place i inside of bookNames, then invokes the books find method.

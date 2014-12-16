@@ -56,9 +56,11 @@ public class Segment
 	
 	public int find(String search, int totalCount, String bookName, int chapter)
 	{
-		int i = 1;		
+		int i = 1;
+		System.out.println("test2");
 		while (verses.get(i+"") != null)
 		{
+			System.out.print("test stuff 1");
 			String current = verses.get(i+"");
 			if (current.contains(search))
 			{
