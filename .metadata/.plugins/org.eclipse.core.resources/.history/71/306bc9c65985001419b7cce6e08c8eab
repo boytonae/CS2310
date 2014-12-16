@@ -196,14 +196,16 @@ public class Controller
 		
 			Controller c = new Controller();
 			String input = "";
-		
+			try {
 				while (!input.equals("quit"))
 				{
 					System.out.println("Enter a thing");
 					input = c.getInput();
 					c.parseInput(input);
 				}
-			
+			} catch (UnknownErrorException e) {
+
+			}
 			
 		
 		
