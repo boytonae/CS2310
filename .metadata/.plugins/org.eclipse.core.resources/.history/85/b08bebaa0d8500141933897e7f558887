@@ -34,9 +34,10 @@ public class Book
 	{
 		LinkedList<String> results = new LinkedList<String>();
 		int i = 0;
-		int total = 0;									
+		int total = 0;									//I was thinking maybe instead of just returning a linkedlist and traversing the structure to get the size, the top thing inside of it would be made to be the size as a string then using ParseInt to extract the size therfore increasing the efficiency to o(1) to get the size instead of o(n)
 		while (segments.containsKey(i)){
 			segments.get(i).find(search, results);
+			
 		}
 		return total;
 				
