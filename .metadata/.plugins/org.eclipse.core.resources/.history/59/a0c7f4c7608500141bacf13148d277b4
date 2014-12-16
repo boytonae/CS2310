@@ -98,11 +98,6 @@ public class Controller
 			String searchTerm = input.replace("search ", "");
 			find(searchTerm);
 		}
-		else if (input.contains("Search"))
-		{
-			String searchTerm = input.replace("Search ", "");
-			find(searchTerm);
-		}
 		else
 		{
 			if (input.contains(":"))

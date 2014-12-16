@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="1" timestamp="1418760058261" analysisTimestamp="1418760056339" release="">
+  <Project projectName="Coursework">
+    <Jar>C:\Users\Teejay\Documents\workspaces\JavaCoursework\CS2310\Coursework\bin</Jar>
+    <AuxClasspathEntry>C:\Users\Teejay\Documents\workspaces\JavaCoursework\CS2310\Coursework\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_25\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\Teejay\Documents\workspaces\JavaCoursework\CS2310\Coursework\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="bibleApp.Controller">
+      <SourceLine classname="bibleApp.Controller" sourcefile="Controller.java" sourcepath="bibleApp/Controller.java"/>
+    </Class>
+    <Method classname="bibleApp.Controller" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="bibleApp.Controller" start="19" end="24" startBytecode="0" endBytecode="91" sourcefile="Controller.java" sourcepath="bibleApp/Controller.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner"/>
+    </Method>
+    <SourceLine classname="bibleApp.Controller" start="22" end="22" startBytecode="23" endBytecode="23" sourcefile="Controller.java" sourcepath="bibleApp/Controller.java"/>
+    <SourceLine classname="bibleApp.Controller" start="22" end="22" startBytecode="23" endBytecode="23" sourcefile="Controller.java" sourcepath="bibleApp/Controller.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" rank="16" abbrev="Dm" category="BAD_PRACTICE" first="1">
+    <Class classname="bibleApp.Controller">
+      <SourceLine classname="bibleApp.Controller" sourcefile="Controller.java" sourcepath="bibleApp/Controller.java"/>
+    </Class>
+    <Method classname="bibleApp.Controller" name="parseInput" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="bibleApp.Controller" start="92" end="134" startBytecode="0" endBytecode="418" sourcefile="Controller.java" sourcepath="bibleApp/Controller.java"/>
+    </Method>
+    <SourceLine classname="bibleApp.Controller" start="94" end="94" startBytecode="10" endBytecode="10" sourcefile="Controller.java" sourcepath="bibleApp/Controller.java"/>
+    <SourceLine classname="bibleApp.Controller" start="94" end="94" startBytecode="10" endBytecode="10" sourcefile="Controller.java" sourcepath="bibleApp/Controller.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="bibleApp.TextReader">
+      <SourceLine classname="bibleApp.TextReader" sourcefile="TextReader.java" sourcepath="bibleApp/TextReader.java"/>
+    </Class>
+    <Method classname="bibleApp.TextReader" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="bibleApp.TextReader" start="15" end="27" startBytecode="0" endBytecode="179" sourcefile="TextReader.java" sourcepath="bibleApp/TextReader.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader"/>
+    </Method>
+    <SourceLine classname="bibleApp.TextReader" start="19" end="19" startBytecode="18" endBytecode="18" sourcefile="TextReader.java" sourcepath="bibleApp/TextReader.java"/>
+    <SourceLine classname="bibleApp.TextReader" start="19" end="19" startBytecode="18" endBytecode="18" sourcefile="TextReader.java" sourcepath="bibleApp/TextReader.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 16 Dec 2014 20:00:48 +0000" total_classes="12" referenced_classes="57" total_bugs="3" total_size="253" num_packages="2" java_version="1.8.0_25" vm_version="25.25-b02" cpu_seconds="8.09" clock_seconds="1.92" peak_mbytes="287.92" alloc_mbytes="455.50" gc_seconds="0.06" priority_2="1" priority_1="2">
+    <PackageStats package="bibleApp" total_bugs="3" total_types="8" total_size="233" priority_2="1" priority_1="2">
+      <ClassStats class="bibleApp.Book" sourceFile="Book.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="bibleApp.BookReader" sourceFile="BookReader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="bibleApp.Controller" sourceFile="Controller.java" interface="false" size="101" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="bibleApp.Psalm" sourceFile="Psalm.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="bibleApp.PsalmReader" sourceFile="PsalmReader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="bibleApp.Segment" sourceFile="Segment.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="bibleApp.StringSplitter" sourceFile="StringSplitter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="bibleApp.TextReader" sourceFile="TextReader.java" interface="false" size="15" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="exceptions" total_bugs="0" total_types="4" total_size="20">
+      <ClassStats class="exceptions.ChapterOutOfRangeException" sourceFile="ChapterOutOfRangeException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="exceptions.CommandNotRecognisedException" sourceFile="CommandNotRecognisedException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="exceptions.InvalidBookNameException" sourceFile="InvalidBookNameException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="exceptions.VerseOutOfRangeException" sourceFile="VerseOutOfRangeException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="235" invocations="2" avgMicrosecondsPerInvocation="117701" maxMicrosecondsPerInvocation="128020" standardDeviationMircosecondsPerInvocation="10319"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="175" invocations="593" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="13272" standardDeviationMircosecondsPerInvocation="763"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="94" invocations="57" avgMicrosecondsPerInvocation="1661" maxMicrosecondsPerInvocation="17379" standardDeviationMircosecondsPerInvocation="3241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="79" invocations="243" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="3249" standardDeviationMircosecondsPerInvocation="446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="52" invocations="595" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="2103" standardDeviationMircosecondsPerInvocation="103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="42" invocations="36" avgMicrosecondsPerInvocation="1191" maxMicrosecondsPerInvocation="10485" standardDeviationMircosecondsPerInvocation="1926"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="42" invocations="40" avgMicrosecondsPerInvocation="1057" maxMicrosecondsPerInvocation="11679" standardDeviationMircosecondsPerInvocation="1979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="41" invocations="553" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="20877" standardDeviationMircosecondsPerInvocation="887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="41" invocations="40" avgMicrosecondsPerInvocation="1039" maxMicrosecondsPerInvocation="10549" standardDeviationMircosecondsPerInvocation="1744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="32" invocations="38" avgMicrosecondsPerInvocation="847" maxMicrosecondsPerInvocation="26162" standardDeviationMircosecondsPerInvocation="4164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="30" invocations="36" avgMicrosecondsPerInvocation="840" maxMicrosecondsPerInvocation="11502" standardDeviationMircosecondsPerInvocation="1846"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="28" invocations="57" avgMicrosecondsPerInvocation="502" maxMicrosecondsPerInvocation="7118" standardDeviationMircosecondsPerInvocation="1140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="27" invocations="65" avgMicrosecondsPerInvocation="428" maxMicrosecondsPerInvocation="13138" standardDeviationMircosecondsPerInvocation="1646"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="26" invocations="36" avgMicrosecondsPerInvocation="741" maxMicrosecondsPerInvocation="4069" standardDeviationMircosecondsPerInvocation="903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="25" invocations="12" avgMicrosecondsPerInvocation="2116" maxMicrosecondsPerInvocation="22948" standardDeviationMircosecondsPerInvocation="6290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="57" avgMicrosecondsPerInvocation="399" maxMicrosecondsPerInvocation="5318" standardDeviationMircosecondsPerInvocation="981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="57" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="9017" standardDeviationMircosecondsPerInvocation="1220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="20" invocations="36" avgMicrosecondsPerInvocation="565" maxMicrosecondsPerInvocation="3374" standardDeviationMircosecondsPerInvocation="639"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1418760058261" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>
