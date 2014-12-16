@@ -49,7 +49,7 @@ public class Segment
 		return verses.get(index + "");
 	}
 	
-	public Stack<String> find(String search, Stack<String> results, String bookName, int chapter)
+	public Stack<String> find(String search, Stack<String> results, String bookName)
 	{
 		int i = 1;
 		while (verses.get(i+"") != null)
@@ -57,10 +57,9 @@ public class Segment
 			String current = verses.get(i+"");
 			if (current.contains(search))
 			{
-				
-				String location = bookName + " " + chapter + ":" + i;
-				
-				
+				String location = "";
+				//somehow get book name and chapter
+				location += ":" + i;
 				results.add(location);
 			}
 			i++;

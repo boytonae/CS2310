@@ -57,10 +57,9 @@ public class Segment
 			String current = verses.get(i+"");
 			if (current.contains(search))
 			{
-				
-				String location = bookName + " " + chapter + ":" + i;
-				
-				
+				String location = "";
+				//somehow get book name and chapter
+				location += ":" + i;
 				results.add(location);
 			}
 			i++;

@@ -36,7 +36,7 @@ public class Book
 		Stack<String> results = new Stack<String>();
 		int i = 0;								
 		while (segments.containsKey(i)){
-			results = segments.get(i).find(search, results, title, i);
+			results = segments.get(i).find(search, results, title);
 			i++;
 		}
 		
