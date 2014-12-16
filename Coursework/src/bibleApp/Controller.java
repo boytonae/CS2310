@@ -198,23 +198,26 @@ public class Controller
 	 */
 	public static void main(String[] args)
 	{
-		
-			Controller c = new Controller();
-			String input = "";
-		
-				while (!input.equals("quit"))
-				{
-					System.out.println("Enter a thing");
-					input = c.getInput();
-					try 
-					{
-						c.parseInput(input);
-					}
-					catch(CommandNotRecognisedException e)
-					{
-						System.err.println(e.getMessage());
-					}
-				}
-			
+		Controller c = new Controller();
+		String input = "";
+		System.out.println("Welcome to the BibleApp.");
+		System.out.println("Enter a book name and chapter, e.g. Genesis 1, to retrieve that chapter.");
+		System.out.println("Add a verse to the book and chapter, e.g. Genesis 1:1, to retrieve a");
+		System.out.println("specific verse. You can also retrieve a range of verses, e.g. Genesis 1:1-5.");
+		System.out.println("You can search for a word by typing Search <word>.");
+		System.out.println("Type quit to exit the program.");
+		while (!input.equals("quit"))
+		{
+			System.out.println("Enter a chapter, verse or search term.");
+			input = c.getInput();
+			try 
+			{
+				c.parseInput(input);
+			}
+			catch(CommandNotRecognisedException e)
+			{
+				System.err.println(e.getMessage());
+			}
+		}		
 	}
 }
