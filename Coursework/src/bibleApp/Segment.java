@@ -1,6 +1,5 @@
 package bibleApp;
 import java.util.HashMap;
-import java.util.Stack;
 import exceptions.VerseOutOfRangeException;
 /**
  * A segment is either a chapter or a psalm
