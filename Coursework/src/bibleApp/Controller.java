@@ -78,6 +78,7 @@ public class Controller
 				reader = new BookReader("assets/kjbible/" + bookNames[i]);
 				books.put(name, splitter.populateChapterBook(reader.getTitle(), reader.getSegments()));
 			}
+			bookNames[i] = name;
 		}
 	}
 	/**
